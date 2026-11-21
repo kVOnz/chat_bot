@@ -71,7 +71,14 @@ function hadleSendMessage() {
     }, 3000);
 }
 
-function clearChatHistory() {}
+function clearChatHistory() {
+    chatMessages.innerHTML = `
+        <div class="message bot-message">
+            <img src="${botAvatar}" alt="Бот" class="message-avatar">
+            <div class="message-text">История очищена, можешь спрашивать по новой.</div>
+        </div>
+    `;
+}
 
 sendButton.addEventListener('click', hadleSendMessage)
 
