@@ -10,7 +10,7 @@ const typingIndicator = document.getElementById('typing-indicator')
 const clearChatButton = document.getElementById('clear-chat')
 
 let isTyping = false;
-let TypingTimer = null;
+let typingTimer = null;
 
 const userAvatar = "https://cdn-icons-png.flaticon.com/512/847/847969";
 const botAvatar = "https://cdn-icons-png.flaticon.com/512/4712/4712039";
@@ -33,6 +33,8 @@ function getBotResponce(userText) {
 
     if (userText.includes("привет") || userText.includes("здравствуйте")) {
         return "Привет! как твои дела?";
+    } else if (userText.includes('нормально')) {
+        return "Это хорошо, что все нормально"
     } else if (userText.includes('погода')) {
         return "К сожалению, я не могу проверить погоду"
     } else if (userText.includes('имя')) {
