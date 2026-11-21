@@ -41,6 +41,10 @@ function getBotResponce(userText) {
         return "Nicolas Jackson"
     } else if (userText.includes('пока') || userText.includes("до свидания")) {
         return "Пока!"
+    } else if (userText.includes('время') || userText.includes('который час')) {
+        return "Сейчас самое время сделать перерыв";
+    } else if (userText.includes('кто получил золотой мяч в 2026') || userText.includes('кто получил зм в 2026')) {
+        return "Харри Кейн";
     } else {
         return "Извините, я не понял"
     }
